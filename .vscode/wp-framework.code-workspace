@@ -1,0 +1,42 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"search.useIgnoreFiles": true,
+	},
+	"extensions": {
+		"recommendations": [
+			"wwm.better-align",
+			"ms-azuretools.vscode-docker",
+			"mikestead.dotenv",
+			"editorconfig.editorconfig",
+			"eamodio.gitlens",
+			"exiasr.hadolint",
+			"yzhang.markdown-all-in-one",
+			"pkief.material-icon-theme",
+			"obliviousharmony.vscode-php-codesniffer",
+			"ikappas.phpcs",
+			"esbenp.prettier-vscode",
+			"johnbillion.vscode-wordpress-hooks",
+			"redhat.vscode-yaml",
+			"formulahendry.auto-close-tag",
+			"matt-rudge.auto-open-preview-panel",
+			"coenraads.bracket-pair-colorizer-2",
+			"gruntfuggly.todo-tree",
+			"aaron-bond.better-comments",
+			"oderwat.indent-rainbow",
+			"syler.sass-indented",
+			"usernamehw.errorlens",
+			"shardulm94.trailing-spaces",
+			"pranaygp.vscode-css-peek",
+			"neilbrayfield.php-docblocker",
+			"christian-kohler.path-intellisense",
+			"naumovs.color-highlight",
+			"kisstkondoros.vscode-gutter-preview",
+			"wtho.vscode-commit-pro-extension"
+		]
+	}
+}

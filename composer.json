@@ -1,0 +1,65 @@
+{
+    "name": "web6/wp-framework",
+    "description": "WordPress rapid development by WEB6 Cloud.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "W6\\WpFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WEB6 Cloud",
+            "email": "hello@web6.cloud"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"php": ">=7.4",
+        "web6/class-collection": "dev-main",
+        "web6/config": "dev-master",
+        "web6/renderer": "dev-main"
+    },
+    "require-dev": {
+        "web6/debugger": "dev-main",
+		"squizlabs/php_codesniffer": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"phpcompatibility/php-compatibility": "*",
+		"phpunit/phpunit": "*",
+		"phpcsstandards/phpcsdevtools": "*",
+        "friendsofphp/php-cs-fixer": "*",
+        "symplify/phpstan-rules": "*",
+        "szepeviktor/phpstan-wordpress": "*",
+        "phpcsstandards/phpcsutils": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+	"scripts": {
+		"check-cs": [
+			"@php ./vendor/squizlabs/php_codesniffer/bin/phpcs"
+		],
+		"fix-cs": [
+			"@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+		],
+		"install-codestandards": [
+			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+		],
+		"run-tests": [
+			"@php ./vendor/phpunit/phpunit/phpunit --filter WordPress --bootstrap=\"./vendor/squizlabs/php_codesniffer/tests/bootstrap.php\" ./vendor/squizlabs/php_codesniffer/tests/AllTests.php"
+		],
+		"check-complete": [
+			"@php ./vendor/phpcsstandards/phpcsdevtools/bin/phpcs-check-feature-completeness -q ./vendor/wp-coding-standards/wpcs/WordPress"
+		],
+		"check-complete-strict": [
+			"@php ./vendor/phpcsstandards/phpcsdevtools/bin/phpcs-check-feature-completeness ./vendor/wp-coding-standards/wpcs/WordPress"
+		]
+	},
+	"support": {
+		"issues": "https://github.com/web6-cloud/wp-framework/issues",
+		"wiki": "https://github.com/web6-cloud/wp-framework/wiki",
+		"source": "https://github.com/web6-cloud/wp-framework"
+	}
+}
