@@ -27,7 +27,8 @@
  	<rule ref="WordPress">
 		<exclude name="Universal.Arrays.DisallowShortArraySyntax" />
 	</rule>
-		<exclude name="WordPress.NamingConventions.ValidFunctionName" />
+	<exclude name="WordPress.NamingConventions.ValidFunctionName" />
+	<exclude name="WordPress.NamingConventions.MethodNameInvalid" />
 
 	<!-- Include the WordPress-Extra standard. -->
 	<rule ref="WordPress-Extra">

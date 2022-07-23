@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adee746873e7701e70ab5e24156658af",
+    "content-hash": "d3578b6ab1dd8f09a48d66dae338393f",
     "packages": [
         {
             "name": "composer/pcre",
@@ -2833,6 +2833,44 @@
                 "source": "https://github.com/w6cloud/php-renderer/tree/main"
             },
             "time": "2021-04-20T18:33:22+00:00"
+        },
+        {
+            "name": "web6/singleton",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/w6cloud/php-singleton-trait.git",
+                "reference": "944c84a8be35faf7653648ec54f48d6b7c5d9b02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/w6cloud/php-singleton-trait/zipball/944c84a8be35faf7653648ec54f48d6b7c5d9b02",
+                "reference": "944c84a8be35faf7653648ec54f48d6b7c5d9b02",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "W6\\Singleton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "WEB6",
+                    "email": "contact@web6.fr"
+                }
+            ],
+            "description": "PHP Singleton design pattern",
+            "support": {
+                "issues": "https://github.com/w6cloud/php-singleton-trait/issues",
+                "source": "https://github.com/w6cloud/php-singleton-trait/tree/0.0.1"
+            },
+            "time": "2019-05-19T21:23:42+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -6784,6 +6822,7 @@
         "web6/class-collection": 20,
         "web6/config": 20,
         "web6/renderer": 20,
+        "web6/singleton": 20,
         "web6/debugger": 20
     },
     "prefer-stable": false,

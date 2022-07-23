@@ -16,23 +16,56 @@
  */
 
 namespace W6\WpFramework;
-	
+
+use \W6\Singleton\SingletonTrait;
+
 /**
  * Plugin Management Class.
  */
 class PluginManager {
 
+	use SingletonTrait;
+
+	/**
+	 * Required Plugins
+	 *
+	 * @var array
+	 */
+	protected $required = [];
+
 	/**
 	 * Class Constructor.
 	 */
 	public function __construct() {
-		add_action( 'tgmpa_register', [ $this, 'registerRequiredPlugins' ] );
+		add_action( 'tgmpa_register', static::registerRequiredPlugins );
+	}
+
+	/**
+	 * Require Plugin
+	 *
+	 * Adds a plugin to the required plugins array.
+	 *
+	 * @param string $name Plugin name.
+	 * @param string $slug The Plugin Alias.
+	 * @param array  $conf The configuration array.
+	 * @return void
+	 */
+	public static function require( string $name, string $slug, array $conf = [] ):void {
+		$t                    = static::instance();
+		$conf['required']     = true;
+		$t->required[ $slug ] = [
+			'name' => $name,
+			'conf' => $conf,
+		];
 	}
 
 	/**
 	 * Register Required Plugins.
+	 *
+	 * - Reads the requirements
 	 */
-	public function registerRequiredPlugins()
-	{
+	public static function registerRequiredPlugins() {
+		$t = static::instance();
+		tgmpa( $t->plugins, $t->config );
 	}
 }

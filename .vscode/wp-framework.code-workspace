@@ -6,10 +6,28 @@
 	],
 	"settings": {
 		"search.useIgnoreFiles": true,
+		"alignment.indentBase": "firstline",
+		"alignment.operatorPadding": "right",
+		"alignment.surroundSpace": {
+			"colon": [
+				0,
+				0
+			],
+			"assignment": [
+				2,
+				1
+			],
+			"arrow": [
+				1,
+				1
+			],
+			"comment": 2
+		},
+		"php-docblocker.alignParams": true,
+		"php-docblocker.alignReturn": true
 	},
 	"extensions": {
 		"recommendations": [
-			"wwm.better-align",
 			"ms-azuretools.vscode-docker",
 			"mikestead.dotenv",
 			"editorconfig.editorconfig",
@@ -36,7 +54,10 @@
 			"christian-kohler.path-intellisense",
 			"naumovs.color-highlight",
 			"kisstkondoros.vscode-gutter-preview",
-			"wtho.vscode-commit-pro-extension"
+			"wtho.vscode-commit-pro-extension",
+			"earshinov.simple-alignment",
+			"tyriar.sort-lines",
+			"wayou.vscode-todo-highlight"
 		]
 	}
 }

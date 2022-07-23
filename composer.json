@@ -18,7 +18,8 @@
 		"php": ">=7.4",
         "web6/class-collection": "dev-main",
         "web6/config": "dev-master",
-        "web6/renderer": "dev-main"
+        "web6/renderer": "dev-main",
+        "web6/singleton": "dev-master"
     },
     "require-dev": {
         "web6/debugger": "dev-main",
